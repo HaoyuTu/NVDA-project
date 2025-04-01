@@ -32,7 +32,7 @@ I’m passionate about data-driven decision making and wanted to explore how sim
 - `yfinance`: Download historical stock data
 - `pandas` & `numpy`: Data wrangling and calculations
 - `matplotlib`: Strategy and signal visualization
-- `quantstats`: Generate full performance metrics report (optional)
+- `quantstats`: Generate full performance metrics report
 
 ---
 
@@ -47,7 +47,6 @@ I’m passionate about data-driven decision making and wanted to explore how sim
 ## 📂 Files Included
 
 - `trading_nvda_like_a_pro.ipynb`: Main notebook
-- `nvda_strategy_report.html`: (Optional) Generated QuantStats performance report
 - `README.md`: You're reading it!
 
 
