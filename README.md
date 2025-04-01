@@ -1,36 +1,56 @@
-# 📈 NVDA Moving Average Strategy
+# NVDA Moving Average Crossover Strategy
 
-This project implements a simple **moving average crossover trading strategy** on NVIDIA (NVDA) stock using Python and historical data.
+This project implements a basic **moving average crossover trading strategy** for NVIDIA (NVDA) stock using Python. The goal is to simulate and compare the performance of two strategies:
 
-## 🔍 Strategy Logic
+1. **MA50/MA200 Crossover Strategy** (Classic golden/death cross)
+2. **MA20/MA50 Crossover Strategy** (Shorter-term trend-following)
 
-- **Short-term MA**: 50-day moving average  
-- **Long-term MA**: 200-day moving average  
-- **Buy signal**: 50-MA crosses above 200-MA (Golden Cross)  
-- **Sell signal**: 50-MA crosses below 200-MA (Death Cross)  
+Both strategies are benchmarked against a **Buy & Hold** baseline.
 
-Backtest simulates $10,000 portfolio with trade-on-signal logic.
+---
 
-## 💻 Tech Stack
+## 💡 Why this project?
 
-- Python  
-- `yfinance` to fetch historical data  
-- `pandas` for data wrangling  
-- `matplotlib` for visualization  
-- `numpy` for calculations  
+I’m passionate about data-driven decision making and wanted to explore how simple technical indicators perform when applied to real historical data. This also served as an opportunity to practice:
+- Financial data collection and manipulation
+- Strategy logic design
+- Portfolio simulation and performance analysis
+- Data visualization and storytelling
 
-## 📊 Output
+---
 
-- Buy/sell signals visualized on price chart  
-- Portfolio value over time  
-- Strategy vs Buy & Hold performance  
+## 📈 Strategy Logic
 
-<img src="https://i.imgur.com/hh9XD3y.png" width="500"/>
+- **Buy signal**: Short-term MA crosses **above** long-term MA (Golden Cross)
+- **Sell signal**: Short-term MA crosses **below** long-term MA (Death Cross)
+- **Simulation**: Starts with $10,000, trades 1:1 on each signal
 
-## ▶️ How to Run
+---
 
-```bash
-git clone https://github.com/HaoyuTu/NVDA-project.git
-cd NVDA-project
-pip install -r requirements.txt
-jupyter notebook nvda_strategy.ipynb
+## 📊 Tools Used
+
+- `yfinance`: Download historical stock data
+- `pandas` & `numpy`: Data wrangling and calculations
+- `matplotlib`: Strategy and signal visualization
+- `quantstats`: Generate full performance metrics report (optional)
+
+---
+
+## 🔍 Key Findings
+
+- MA20/50 often reacts faster but may lead to more false signals
+- MA50/200 is more conservative, trades less frequently
+- Both strategies were compared against Buy & Hold to observe long-term value impact
+
+---
+
+## 📂 Files Included
+
+- `trading_nvda_like_a_pro.ipynb`: Main notebook
+- `nvda_strategy_report.html`: (Optional) Generated QuantStats performance report
+- `README.md`: You're reading it!
+
+
+---
+
+Feel free to fork this repo, try your own tweaks, or contact me if you’re working on similar projects!
